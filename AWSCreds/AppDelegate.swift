@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         case runtimeError(String)
     }
     
-    func openFolderSelection() -> URL?
+    @objc func openFolderSelection() -> URL?
     {
         let dialog = NSOpenPanel();
         
@@ -113,9 +113,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func setupMenus() throws {
+    @objc func setupMenus() throws {
         // 1
         let menu = NSMenu()
+        menu.removeAllItems()
+        profiles = []
         let funcPath = openFolderSelection()
         let stringPath = funcPath?.absoluteString.replacingOccurrences(of: "file://", with: "")
         let parser = try INIParser(stringPath!)
@@ -170,6 +172,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Switch Profile Submenu
         menu.setSubmenu(switchProfileSubmenu, for: switchProfileMenuItem)
         
+        // Choose Creds File
+        let chooseCredsMenuItem = NSMenuItem(title: "Import Creds", action: #selector(setupMenus), keyEquivalent: "i")
+        chooseCredsMenuItem.target = self
+        menu.addItem(chooseCredsMenuItem)
         
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
