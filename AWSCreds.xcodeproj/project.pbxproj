@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3DAB192B28B7586D00E9DB5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB192A28B7586D00E9DB5E /* Main.storyboard */; };
+		3DAB192E28B759CC00E9DB5E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB192D28B759CC00E9DB5E /* README.md */; };
 		3DFE66D028B7541500959C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66CF28B7541500959C33 /* AppDelegate.swift */; };
 		3DFE66D228B7541500959C33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66D128B7541500959C33 /* ViewController.swift */; };
 		3DFE66D428B7541700959C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE66D328B7541700959C33 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		3DAB192928B7564B00E9DB5E /* Perfect-INI-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Perfect-INI-master"; path = "../Perfect-INI-master"; sourceTree = "<group>"; };
 		3DAB192A28B7586D00E9DB5E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DAB192C28B758F400E9DB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3DAB192D28B759CC00E9DB5E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3DFE66CC28B7541500959C33 /* AWSCreds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSCreds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFE66CF28B7541500959C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFE66D128B7541500959C33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,9 +88,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DAB192F28B75A0600E9DB5E /* res */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		3DFE66C328B7541500959C33 = {
 			isa = PBXGroup;
 			children = (
+				3DAB192F28B75A0600E9DB5E /* res */,
+				3DAB192D28B759CC00E9DB5E /* README.md */,
 				3DAB192A28B7586D00E9DB5E /* Main.storyboard */,
 				3DFE66FA28B7544F00959C33 /* Packages */,
 				3DFE66CE28B7541500959C33 /* AWSCreds */,
@@ -261,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAB192E28B759CC00E9DB5E /* README.md in Resources */,
 				3DFE66D428B7541700959C33 /* Assets.xcassets in Resources */,
 				3DAB192B28B7586D00E9DB5E /* Main.storyboard in Resources */,
 			);
