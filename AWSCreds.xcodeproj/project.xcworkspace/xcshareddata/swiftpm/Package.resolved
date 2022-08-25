@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "fsevents",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eonil/FSEvents",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e6b7cdfa2754454e194a45ee6c2004d0f630fe88"
+      }
+    },
+    {
+      "identity" : "perfect-iniparser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PerfectlySoft/Perfect-INIParser",
+      "state" : {
+        "branch" : "master",
+        "revision" : "d5f7373ea4affec9af8b9727f411b884288562f8"
+      }
+    }
+  ],
+  "version" : 2
+}

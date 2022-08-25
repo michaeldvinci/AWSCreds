@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DAB192B28B7586D00E9DB5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB192A28B7586D00E9DB5E /* Main.storyboard */; };
+		3DFE66D028B7541500959C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66CF28B7541500959C33 /* AppDelegate.swift */; };
+		3DFE66D228B7541500959C33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66D128B7541500959C33 /* ViewController.swift */; };
+		3DFE66D428B7541700959C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFE66D328B7541700959C33 /* Assets.xcassets */; };
+		3DFE66E228B7541700959C33 /* AWSCredsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66E128B7541700959C33 /* AWSCredsTests.swift */; };
+		3DFE66EC28B7541700959C33 /* AWSCredsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66EB28B7541700959C33 /* AWSCredsUITests.swift */; };
+		3DFE66EE28B7541700959C33 /* AWSCredsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66ED28B7541700959C33 /* AWSCredsUITestsLaunchTests.swift */; };
+		3DFE66FE28B7545E00959C33 /* EonilFSEvents in Frameworks */ = {isa = PBXBuildFile; productRef = 3DFE66FD28B7545E00959C33 /* EonilFSEvents */; };
+		3DFE670128B7546C00959C33 /* INIParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3DFE670028B7546C00959C33 /* INIParser */; };
+		3DFE670328B754C500959C33 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE670228B754C500959C33 /* main.swift */; };
+		3DFE670528B754E000959C33 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE670428B754E000959C33 /* Globals.swift */; };
+		3DFE670728B7550700959C33 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE670628B7550700959C33 /* Profile.swift */; };
+		3DFE670928B7551500959C33 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE670828B7551500959C33 /* Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DFE66DE28B7541700959C33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DFE66C428B7541500959C33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DFE66CB28B7541500959C33;
+			remoteInfo = AWSCreds;
+		};
+		3DFE66E828B7541700959C33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DFE66C428B7541500959C33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DFE66CB28B7541500959C33;
+			remoteInfo = AWSCreds;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DAB192928B7564B00E9DB5E /* Perfect-INI-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Perfect-INI-master"; path = "../Perfect-INI-master"; sourceTree = "<group>"; };
+		3DAB192A28B7586D00E9DB5E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3DAB192C28B758F400E9DB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3DFE66CC28B7541500959C33 /* AWSCreds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSCreds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DFE66CF28B7541500959C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DFE66D128B7541500959C33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DFE66D328B7541700959C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DFE66D828B7541700959C33 /* AWSCreds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AWSCreds.entitlements; sourceTree = "<group>"; };
+		3DFE66DD28B7541700959C33 /* AWSCredsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSCredsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DFE66E128B7541700959C33 /* AWSCredsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSCredsTests.swift; sourceTree = "<group>"; };
+		3DFE66E728B7541700959C33 /* AWSCredsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSCredsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DFE66EB28B7541700959C33 /* AWSCredsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSCredsUITests.swift; sourceTree = "<group>"; };
+		3DFE66ED28B7541700959C33 /* AWSCredsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSCredsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3DFE670228B754C500959C33 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3DFE670428B754E000959C33 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		3DFE670628B7550700959C33 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		3DFE670828B7551500959C33 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DFE66C928B7541500959C33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFE670128B7546C00959C33 /* INIParser in Frameworks */,
+				3DFE66FE28B7545E00959C33 /* EonilFSEvents in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DFE66DA28B7541700959C33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DFE66E428B7541700959C33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DFE66C328B7541500959C33 = {
+			isa = PBXGroup;
+			children = (
+				3DAB192A28B7586D00E9DB5E /* Main.storyboard */,
+				3DFE66FA28B7544F00959C33 /* Packages */,
+				3DFE66CE28B7541500959C33 /* AWSCreds */,
+				3DFE66E028B7541700959C33 /* AWSCredsTests */,
+				3DFE66EA28B7541700959C33 /* AWSCredsUITests */,
+				3DFE66CD28B7541500959C33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DFE66CD28B7541500959C33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DFE66CC28B7541500959C33 /* AWSCreds.app */,
+				3DFE66DD28B7541700959C33 /* AWSCredsTests.xctest */,
+				3DFE66E728B7541700959C33 /* AWSCredsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DFE66CE28B7541500959C33 /* AWSCreds */ = {
+			isa = PBXGroup;
+			children = (
+				3DAB192C28B758F400E9DB5E /* Info.plist */,
+				3DFE66CF28B7541500959C33 /* AppDelegate.swift */,
+				3DFE66D128B7541500959C33 /* ViewController.swift */,
+				3DFE66D328B7541700959C33 /* Assets.xcassets */,
+				3DFE66D828B7541700959C33 /* AWSCreds.entitlements */,
+				3DFE670228B754C500959C33 /* main.swift */,
+				3DFE670428B754E000959C33 /* Globals.swift */,
+				3DFE670628B7550700959C33 /* Profile.swift */,
+				3DFE670828B7551500959C33 /* Utils.swift */,
+			);
+			path = AWSCreds;
+			sourceTree = "<group>";
+		};
+		3DFE66E028B7541700959C33 /* AWSCredsTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DFE66E128B7541700959C33 /* AWSCredsTests.swift */,
+			);
+			path = AWSCredsTests;
+			sourceTree = "<group>";
+		};
+		3DFE66EA28B7541700959C33 /* AWSCredsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3DFE66EB28B7541700959C33 /* AWSCredsUITests.swift */,
+				3DFE66ED28B7541700959C33 /* AWSCredsUITestsLaunchTests.swift */,
+			);
+			path = AWSCredsUITests;
+			sourceTree = "<group>";
+		};
+		3DFE66FA28B7544F00959C33 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				3DAB192928B7564B00E9DB5E /* Perfect-INI-master */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DFE66CB28B7541500959C33 /* AWSCreds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DFE66F128B7541700959C33 /* Build configuration list for PBXNativeTarget "AWSCreds" */;
+			buildPhases = (
+				3DFE66C828B7541500959C33 /* Sources */,
+				3DFE66C928B7541500959C33 /* Frameworks */,
+				3DFE66CA28B7541500959C33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AWSCreds;
+			packageProductDependencies = (
+				3DFE66FD28B7545E00959C33 /* EonilFSEvents */,
+				3DFE670028B7546C00959C33 /* INIParser */,
+			);
+			productName = AWSCreds;
+			productReference = 3DFE66CC28B7541500959C33 /* AWSCreds.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DFE66DC28B7541700959C33 /* AWSCredsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DFE66F428B7541700959C33 /* Build configuration list for PBXNativeTarget "AWSCredsTests" */;
+			buildPhases = (
+				3DFE66D928B7541700959C33 /* Sources */,
+				3DFE66DA28B7541700959C33 /* Frameworks */,
+				3DFE66DB28B7541700959C33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DFE66DF28B7541700959C33 /* PBXTargetDependency */,
+			);
+			name = AWSCredsTests;
+			productName = AWSCredsTests;
+			productReference = 3DFE66DD28B7541700959C33 /* AWSCredsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3DFE66E628B7541700959C33 /* AWSCredsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DFE66F728B7541700959C33 /* Build configuration list for PBXNativeTarget "AWSCredsUITests" */;
+			buildPhases = (
+				3DFE66E328B7541700959C33 /* Sources */,
+				3DFE66E428B7541700959C33 /* Frameworks */,
+				3DFE66E528B7541700959C33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DFE66E928B7541700959C33 /* PBXTargetDependency */,
+			);
+			name = AWSCredsUITests;
+			productName = AWSCredsUITests;
+			productReference = 3DFE66E728B7541700959C33 /* AWSCredsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DFE66C428B7541500959C33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3DFE66CB28B7541500959C33 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					3DFE66DC28B7541700959C33 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3DFE66CB28B7541500959C33;
+					};
+					3DFE66E628B7541700959C33 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3DFE66CB28B7541500959C33;
+					};
+				};
+			};
+			buildConfigurationList = 3DFE66C728B7541500959C33 /* Build configuration list for PBXProject "AWSCreds" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DFE66C328B7541500959C33;
+			packageReferences = (
+				3DFE66FC28B7545E00959C33 /* XCRemoteSwiftPackageReference "FSEvents" */,
+				3DFE66FF28B7546C00959C33 /* XCRemoteSwiftPackageReference "Perfect-INIParser" */,
+			);
+			productRefGroup = 3DFE66CD28B7541500959C33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DFE66CB28B7541500959C33 /* AWSCreds */,
+				3DFE66DC28B7541700959C33 /* AWSCredsTests */,
+				3DFE66E628B7541700959C33 /* AWSCredsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DFE66CA28B7541500959C33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFE66D428B7541700959C33 /* Assets.xcassets in Resources */,
+				3DAB192B28B7586D00E9DB5E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DFE66DB28B7541700959C33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DFE66E528B7541700959C33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DFE66C828B7541500959C33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFE670528B754E000959C33 /* Globals.swift in Sources */,
+				3DFE670728B7550700959C33 /* Profile.swift in Sources */,
+				3DFE66D228B7541500959C33 /* ViewController.swift in Sources */,
+				3DFE66D028B7541500959C33 /* AppDelegate.swift in Sources */,
+				3DFE670328B754C500959C33 /* main.swift in Sources */,
+				3DFE670928B7551500959C33 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DFE66D928B7541700959C33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFE66E228B7541700959C33 /* AWSCredsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DFE66E328B7541700959C33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFE66EE28B7541700959C33 /* AWSCredsUITestsLaunchTests.swift in Sources */,
+				3DFE66EC28B7541700959C33 /* AWSCredsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DFE66DF28B7541700959C33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DFE66CB28B7541500959C33 /* AWSCreds */;
+			targetProxy = 3DFE66DE28B7541700959C33 /* PBXContainerItemProxy */;
+		};
+		3DFE66E928B7541700959C33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DFE66CB28B7541500959C33 /* AWSCreds */;
+			targetProxy = 3DFE66E828B7541700959C33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3DFE66EF28B7541700959C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DFE66F028B7541700959C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3DFE66F228B7541700959C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AWSCreds/AWSCreds.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQ63VWNLW5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AWSCreds/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conedmiro.AWSCreds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3DFE66F328B7541700959C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AWSCreds/AWSCreds.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQ63VWNLW5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AWSCreds/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conedmiro.AWSCreds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3DFE66F528B7541700959C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQ63VWNLW5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conedmiro.AWSCredsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AWSCreds.app/Contents/MacOS/AWSCreds";
+			};
+			name = Debug;
+		};
+		3DFE66F628B7541700959C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQ63VWNLW5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conedmiro.AWSCredsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AWSCreds.app/Contents/MacOS/AWSCreds";
+			};
+			name = Release;
+		};
+		3DFE66F828B7541700959C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQ63VWNLW5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conedmiro.AWSCredsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AWSCreds;
+			};
+			name = Debug;
+		};
+		3DFE66F928B7541700959C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQ63VWNLW5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conedmiro.AWSCredsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AWSCreds;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DFE66C728B7541500959C33 /* Build configuration list for PBXProject "AWSCreds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFE66EF28B7541700959C33 /* Debug */,
+				3DFE66F028B7541700959C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DFE66F128B7541700959C33 /* Build configuration list for PBXNativeTarget "AWSCreds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFE66F228B7541700959C33 /* Debug */,
+				3DFE66F328B7541700959C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DFE66F428B7541700959C33 /* Build configuration list for PBXNativeTarget "AWSCredsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFE66F528B7541700959C33 /* Debug */,
+				3DFE66F628B7541700959C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DFE66F728B7541700959C33 /* Build configuration list for PBXNativeTarget "AWSCredsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFE66F828B7541700959C33 /* Debug */,
+				3DFE66F928B7541700959C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DFE66FC28B7545E00959C33 /* XCRemoteSwiftPackageReference "FSEvents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eonil/FSEvents";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3DFE66FF28B7546C00959C33 /* XCRemoteSwiftPackageReference "Perfect-INIParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PerfectlySoft/Perfect-INIParser";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DFE66FD28B7545E00959C33 /* EonilFSEvents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DFE66FC28B7545E00959C33 /* XCRemoteSwiftPackageReference "FSEvents" */;
+			productName = EonilFSEvents;
+		};
+		3DFE670028B7546C00959C33 /* INIParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DFE66FF28B7546C00959C33 /* XCRemoteSwiftPackageReference "Perfect-INIParser" */;
+			productName = INIParser;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3DFE66C428B7541500959C33 /* Project object */;
+}
