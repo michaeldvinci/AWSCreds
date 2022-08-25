@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  AWSProfile
+//  AWSCreds
 //
 //  Created by Mike Vinci on 8/23/22.
 //

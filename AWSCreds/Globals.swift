@@ -1,9 +1,8 @@
 //
 //  Globals.swift
-//  KubeContext
+//  AWSCreds
 //
-//  Created by Turken, Hasan on 20.10.18.
-//  Copyright © 2018 Turken, Hasan. All rights reserved.
+//  Created by Mike Vinci on 8/23/22.
 //
 
 import Foundation
@@ -11,7 +10,6 @@ import os
 import Cocoa
 
 let bundleID = Bundle.main.bundleIdentifier!
-let proProductId = bundleID + ".pro"
 
 //let logger = OSLog(subsystem: bundleID, category: "kube")
 var uiTesting = false
