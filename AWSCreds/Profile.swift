@@ -84,7 +84,6 @@ public class Profile {
     }
     
     func loadCreds(url: URL) throws -> URL? {
-        let fileContent = try String(contentsOf: url, encoding: .utf8)
 
 //        let decoder = INIDecoder()
 //        var config = try decoder.decode(Config.self, from: fileContent)

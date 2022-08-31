@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DAB192B28B7586D00E9DB5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB192A28B7586D00E9DB5E /* Main.storyboard */; };
+		3D3AC27328BDAFC800CD4686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3AC27228BDAFC800CD4686 /* Main.storyboard */; };
 		3DAB192E28B759CC00E9DB5E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB192D28B759CC00E9DB5E /* README.md */; };
 		3DFE66D028B7541500959C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66CF28B7541500959C33 /* AppDelegate.swift */; };
 		3DFE66D228B7541500959C33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66D128B7541500959C33 /* ViewController.swift */; };
@@ -21,6 +21,8 @@
 		3DFE670528B754E000959C33 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE670428B754E000959C33 /* Globals.swift */; };
 		3DFE670728B7550700959C33 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE670628B7550700959C33 /* Profile.swift */; };
 		3DFE670928B7551500959C33 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE670828B7551500959C33 /* Utils.swift */; };
+		3DFF7DA428BD9D380083F6D8 /* INIParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3DFF7DA328BD9D380083F6D8 /* INIParser */; };
+		3DFF7DA728BD9D710083F6D8 /* PerfectINI in Frameworks */ = {isa = PBXBuildFile; productRef = 3DFF7DA628BD9D710083F6D8 /* PerfectINI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3DAB192928B7564B00E9DB5E /* Perfect-INI-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Perfect-INI-master"; path = "../Perfect-INI-master"; sourceTree = "<group>"; };
-		3DAB192A28B7586D00E9DB5E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3D3AC27228BDAFC800CD4686 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DAB192C28B758F400E9DB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3DAB192D28B759CC00E9DB5E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3DFE66CC28B7541500959C33 /* AWSCreds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSCreds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +60,7 @@
 		3DFE670428B754E000959C33 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		3DFE670628B7550700959C33 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3DFE670828B7551500959C33 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3DFF7DA128BD9CF20083F6D8 /* Perfect-INI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "Perfect-INI"; path = "../../code/Perfect-INI"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DFE670128B7546C00959C33 /* INIParser in Frameworks */,
+				3DFF7DA428BD9D380083F6D8 /* INIParser in Frameworks */,
 				3DFE66FE28B7545E00959C33 /* EonilFSEvents in Frameworks */,
+				3DFF7DA728BD9D710083F6D8 /* PerfectINI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +104,12 @@
 			children = (
 				3DAB192F28B75A0600E9DB5E /* res */,
 				3DAB192D28B759CC00E9DB5E /* README.md */,
-				3DAB192A28B7586D00E9DB5E /* Main.storyboard */,
 				3DFE66FA28B7544F00959C33 /* Packages */,
 				3DFE66CE28B7541500959C33 /* AWSCreds */,
 				3DFE66E028B7541700959C33 /* AWSCredsTests */,
 				3DFE66EA28B7541700959C33 /* AWSCredsUITests */,
 				3DFE66CD28B7541500959C33 /* Products */,
+				3DFF7DA528BD9D710083F6D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +135,7 @@
 				3DFE670428B754E000959C33 /* Globals.swift */,
 				3DFE670628B7550700959C33 /* Profile.swift */,
 				3DFE670828B7551500959C33 /* Utils.swift */,
+				3D3AC27228BDAFC800CD4686 /* Main.storyboard */,
 			);
 			path = AWSCreds;
 			sourceTree = "<group>";
@@ -155,9 +160,16 @@
 		3DFE66FA28B7544F00959C33 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				3DAB192928B7564B00E9DB5E /* Perfect-INI-master */,
+				3DFF7DA128BD9CF20083F6D8 /* Perfect-INI */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		3DFF7DA528BD9D710083F6D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +191,8 @@
 			packageProductDependencies = (
 				3DFE66FD28B7545E00959C33 /* EonilFSEvents */,
 				3DFE670028B7546C00959C33 /* INIParser */,
+				3DFF7DA328BD9D380083F6D8 /* INIParser */,
+				3DFF7DA628BD9D710083F6D8 /* PerfectINI */,
 			);
 			productName = AWSCreds;
 			productReference = 3DFE66CC28B7541500959C33 /* AWSCreds.app */;
@@ -255,6 +269,7 @@
 			packageReferences = (
 				3DFE66FC28B7545E00959C33 /* XCRemoteSwiftPackageReference "FSEvents" */,
 				3DFE66FF28B7546C00959C33 /* XCRemoteSwiftPackageReference "Perfect-INIParser" */,
+				3DFF7DA228BD9D380083F6D8 /* XCRemoteSwiftPackageReference "Perfect-INIParser" */,
 			);
 			productRefGroup = 3DFE66CD28B7541500959C33 /* Products */;
 			projectDirPath = "";
@@ -272,9 +287,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3AC27328BDAFC800CD4686 /* Main.storyboard in Resources */,
 				3DAB192E28B759CC00E9DB5E /* README.md in Resources */,
 				3DFE66D428B7541700959C33 /* Assets.xcassets in Resources */,
-				3DAB192B28B7586D00E9DB5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +655,14 @@
 				kind = branch;
 			};
 		};
+		3DFF7DA228BD9D380083F6D8 /* XCRemoteSwiftPackageReference "Perfect-INIParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PerfectlySoft/Perfect-INIParser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -652,6 +675,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DFE66FF28B7546C00959C33 /* XCRemoteSwiftPackageReference "Perfect-INIParser" */;
 			productName = INIParser;
+		};
+		3DFF7DA328BD9D380083F6D8 /* INIParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DFF7DA228BD9D380083F6D8 /* XCRemoteSwiftPackageReference "Perfect-INIParser" */;
+			productName = INIParser;
+		};
+		3DFF7DA628BD9D710083F6D8 /* PerfectINI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PerfectINI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

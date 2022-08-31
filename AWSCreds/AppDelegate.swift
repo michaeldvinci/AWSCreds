@@ -9,6 +9,7 @@ import Cocoa
 import Foundation
 import os
 import INIParser
+import PerfectINI
 //import Yams
 //import EonilFSEvents
 
@@ -16,6 +17,17 @@ import INIParser
 class AppDelegate: NSObject, NSApplicationDelegate {
     private var window: NSWindow!
     private var statusItem: NSStatusItem!
+    
+    struct Profile: Codable {
+        var name: String
+        var accessKey: String
+        var secretKey: String
+        var token: String?
+        var region: String?
+        var output: String?
+    }
+    
+    var profiles: [Profile] = []
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -81,8 +93,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         if sender.state == NSControl.StateValue.off {
             sender.state = NSControl.StateValue.on
+            currentProfile = sender.title
             do {
                 try grabExport(name: sender.title)
+                print("currentProfile: " + currentProfile)
             } catch {
                 NSLog ("Could not switch profile: \(error)")
             }
@@ -91,6 +105,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func logClick(_ sender: NSMenuItem) {
         NSLog("Clicked on " + sender.title)
+    }
+    
+    func parseINI(iniText: String) {
+        
     }
     
     func grabExport(name: String) {
@@ -119,35 +137,48 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.removeAllItems()
         profiles = []
         let funcPath = openFolderSelection()
-        let stringPath = funcPath?.absoluteString.replacingOccurrences(of: "file://", with: "")
-        let parser = try INIParser(stringPath!)
-        
+        let switchProfileSubmenu = NSMenu()
         menu.removeAllItems()
+        
+        if funcPath != nil {
+            stringPath = funcPath?.absoluteString.replacingOccurrences(of: "file://", with: "")
+            let parser = try INIParser(stringPath!)
+            for section in parser.sections {
+                let profile = Profile(
+                    name: section.0,
+                    accessKey: (section.1["aws_access_key_id"] ?? ""),
+                    secretKey: (section.1["aws_secret_access_key"] ?? ""),
+                    token: (section.1["token"] ?? ""),
+                    region: "us-west-2",
+                    output: (section.1["output"] ?? "")
+                )
+                profiles.append(profile)
+            }
+            profiles = profiles.sorted  { $0.name < $1.name }
+
+            for profile in profiles {
+                print("name: " + profile.name)
+                print("aws_access_key_id: " + profile.accessKey)
+                print("aws_secret_access_key: " + profile.secretKey)
+                print("token: " + (profile.token ?? "none"))
+                print("region: " + (profile.region ?? "none"))
+                print("output: " + (profile.output ?? "none"))
+                print("-------------------------------------")
+            }
+            
+        } else {
+            let noProMenuItem = NSMenuItem(title: "No more profiles", action: nil, keyEquivalent: "")
+            switchProfileSubmenu.addItem(noProMenuItem)
+        }
+                        
         let centerParagraphStyle = NSMutableParagraphStyle.init()
         centerParagraphStyle.alignment = .center
         
-        let switchProfileSubmenu = NSMenu()
-                
-        for section in parser.sections {
-            profiles.append(section.0)
-        }
-        profiles.sort()
-        
         for profile in profiles {
-            let profileMenuItem = NSMenuItem(title: profile, action: #selector(toggleState), keyEquivalent: "")
+            let profileMenuItem = NSMenuItem(title: profile.name, action: #selector(toggleState), keyEquivalent: "")
             profileMenuItem.target = self
             switchProfileSubmenu.addItem(profileMenuItem)
         }
-        
-//        for profile in profiles {
-//            if profile.contains("[") {
-//                count = count + 1
-//                let profileClean = profile.replacingOccurrences(of: "[",with: "").replacingOccurrences(of: "]",with: "")
-//                let profileMenuItem = NSMenuItem(title: profileClean, action: #selector(toggleState), keyEquivalent: "")
-//                profileMenuItem.target = self
-//                switchProfileSubmenu.addItem(profileMenuItem)
-//            }
-//        }
         
         let titleVar = "AWS Profiles"
         
