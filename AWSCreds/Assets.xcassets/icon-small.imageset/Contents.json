@@ -1,11 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "Arch-Category_End-User-Computing_16.png",
+      "filename" : "aws.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "aws (2).png",
       "idiom" : "universal",
       "scale" : "2x"
     },

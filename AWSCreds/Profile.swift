@@ -29,7 +29,7 @@ public class Aws {
         }
         if creds == nil || creds != f {
             creds = openFolderSelection()
-            initWatcher()
+//            initWatcher()
         }
     }
     
@@ -43,6 +43,7 @@ public class Aws {
     
     func setConfig(credsFile: URL?) throws {
         if credsFile == nil {
+            print(credsFile)
             return
         }
         let _ = try loadCreds(url: credsFile!)

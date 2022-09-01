@@ -12,7 +12,6 @@ import PerfectINI
 
 class MenuBarManager: NSObject, NSMenuDelegate {
     var manageController: NSWindowController?
-    private var window: NSWindow!
     
     struct Profile: Codable {
         var name: String
@@ -121,10 +120,10 @@ class MenuBarManager: NSObject, NSMenuDelegate {
     func SetupMainMenu(menu: NSMenu) {
         menu.removeAllItems()
         profiles = []
-        funcPath = aws.creds!
         let switchProfileSubmenu = NSMenu()
 
-        if funcPath != nil {
+        if aws.creds != nil {
+            funcPath = aws.creds!
             stringPath = funcPath!.absoluteString.replacingOccurrences(of: "file://", with: "")
 //            backupIni(file: stringPath!, filemgr: FileManager.default)
             do {
