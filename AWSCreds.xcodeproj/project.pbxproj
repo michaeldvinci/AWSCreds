@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D03A22A28C0338E00B4E44D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03A22928C0338E00B4E44D /* Config.swift */; };
+		3D03A22D28C1343F00B4E44D /* MenuBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03A22C28C1343F00B4E44D /* MenuBarManager.swift */; };
 		3D3AC27328BDAFC800CD4686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3AC27228BDAFC800CD4686 /* Main.storyboard */; };
 		3DAB192E28B759CC00E9DB5E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB192D28B759CC00E9DB5E /* README.md */; };
 		3DFE66D028B7541500959C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE66CF28B7541500959C33 /* AppDelegate.swift */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D03A22928C0338E00B4E44D /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3D03A22B28C05BA300B4E44D /* AWSCredsRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AWSCredsRelease.entitlements; sourceTree = "<group>"; };
+		3D03A22C28C1343F00B4E44D /* MenuBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarManager.swift; sourceTree = "<group>"; };
 		3D3AC27228BDAFC800CD4686 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DAB192C28B758F400E9DB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3DAB192D28B759CC00E9DB5E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -126,6 +131,7 @@
 		3DFE66CE28B7541500959C33 /* AWSCreds */ = {
 			isa = PBXGroup;
 			children = (
+				3D03A22B28C05BA300B4E44D /* AWSCredsRelease.entitlements */,
 				3DAB192C28B758F400E9DB5E /* Info.plist */,
 				3DFE66CF28B7541500959C33 /* AppDelegate.swift */,
 				3DFE66D128B7541500959C33 /* ViewController.swift */,
@@ -136,6 +142,8 @@
 				3DFE670628B7550700959C33 /* Profile.swift */,
 				3DFE670828B7551500959C33 /* Utils.swift */,
 				3D3AC27228BDAFC800CD4686 /* Main.storyboard */,
+				3D03A22928C0338E00B4E44D /* Config.swift */,
+				3D03A22C28C1343F00B4E44D /* MenuBarManager.swift */,
 			);
 			path = AWSCreds;
 			sourceTree = "<group>";
@@ -317,6 +325,8 @@
 				3DFE670528B754E000959C33 /* Globals.swift in Sources */,
 				3DFE670728B7550700959C33 /* Profile.swift in Sources */,
 				3DFE66D228B7541500959C33 /* ViewController.swift in Sources */,
+				3D03A22A28C0338E00B4E44D /* Config.swift in Sources */,
+				3D03A22D28C1343F00B4E44D /* MenuBarManager.swift in Sources */,
 				3DFE66D028B7541500959C33 /* AppDelegate.swift in Sources */,
 				3DFE670328B754C500959C33 /* main.swift in Sources */,
 				3DFE670928B7551500959C33 /* Utils.swift in Sources */,
@@ -502,7 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AWSCreds/AWSCreds.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AWSCreds/AWSCredsRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
