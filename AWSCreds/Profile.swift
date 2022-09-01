@@ -7,9 +7,9 @@
 
 import Foundation
 import EonilFSEvents
-//import PerfectINI
+import PerfectINI
 
-public class Profile {
+public class Aws {
     let fileManager = FileManager.default
     var creds:URL?
     var watcher: EonilFSEventStream!
@@ -25,16 +25,23 @@ public class Profile {
     public init() {
         let f = loadBookmarks()
         if f == nil {
-            return
+            print("need to fix bookmarking")
         }
-    
         if creds == nil || creds != f {
-            creds = f
-            initWatcher()
+            creds = openFolderSelection()
+//            initWatcher()
         }
     }
     
-    func setCreds(credsFile: URL?) throws {
+    func loadCreds(url: URL) throws -> URL? {
+
+//        let decoder = INIDecoder()
+//        var config = try decoder.decode(Config.self, from: fileContent)
+
+        return url
+    }
+    
+    func setConfig(credsFile: URL?) throws {
         if credsFile == nil {
             return
         }
@@ -44,7 +51,7 @@ public class Profile {
             creds = credsFile
             initWatcher()
         }
-        backupCreds()
+        backupConfig ()
 //        storeFolderInBookmark(url: credsFile!)
 //        saveBookmarksData()
     }
@@ -67,7 +74,7 @@ public class Profile {
         }
     }
     
-    func backupCreds() {
+    func backupConfig () {
         let origCredsURL = getOrigCredsFileUrl()
         do {
             if fileManager.isReadableFile(atPath: (origCredsURL?.path)!) {
@@ -83,12 +90,39 @@ public class Profile {
         return (creds?.path)!
     }
     
-    func loadCreds(url: URL) throws -> URL? {
+    func loadConfig(url: URL) throws -> Config? {
+        fileContent = try String(contentsOf: url, encoding: .utf8)
+        
+        let decoder = INIDecoder()
+        print(decoder as Any)
+        let config = try decoder.decode(Config.self, from: Data(contentsOf: URL(fileURLWithPath: fileContent)))
+        
+        for (i, ctx) in config.Profiles.enumerated() {
+            if #available(OSX 10.13, *) {
+                print("games")
+                print("i: \(i), ctx: \(ctx)")
+                print("!")
+            }
+        }
 
-//        let decoder = INIDecoder()
-//        var config = try decoder.decode(Config.self, from: fileContent)
-
-        return url
+        return config
+    }
+    
+    func importConfig(configToImportFileUrl: URL) throws {
+        let mainConfig = try loadConfig(url: aws.creds!)
+        
+//        let mergedConfig = try mergeKubeconfigIntoConfig(configToImportFileUrl: configToImportFileUrl, mainConfig: mainConfig!)
+//
+//        try saveConfig(config: mergedConfig)
+    }
+    
+//    func saveConfig(config: Config) throws {
+//        try saveConfigToFile(config: config, file: kubeconfig)
+//    }
+    
+    func getConfig(url: URL) throws -> Config? {
+        print("getConfig")
+        return try loadConfig(url: url)
     }
     
 }
@@ -104,3 +138,4 @@ func getOrigCredsFileUrl() -> URL? {
         return nil
     }
 }
+

@@ -17,20 +17,15 @@ func openFolderSelection() -> URL?
 {
     let dialog = NSOpenPanel();
     
-    //dialog.title                   = "Choose kubeconfig file";
-    dialog.message                 = "Choose kubeconfig file";
+    dialog.message                 = "Choose AWS credentials file";
     dialog.showsResizeIndicator    = true;
     dialog.showsHiddenFiles        = true;
     dialog.canChooseDirectories    = false;
     dialog.canCreateDirectories    = false;
     dialog.allowsMultipleSelection = false;
     
-    //let launcherLogPathWithTilde = "~/.kube" as NSString
-    //let expandedLauncherLogPath = launcherLogPathWithTilde.expandingTildeInPath
-    //dialog.directoryURL = NSURL.fileURL(withPath: expandedLauncherLogPath, isDirectory: true)
-    
     if (dialog.runModal() == NSApplication.ModalResponse.OK) {
-        let result = dialog.url // Pathname of the file
+        let result = dialog.url
         
         if (result != nil) {
             let path = result!.path
@@ -38,7 +33,6 @@ func openFolderSelection() -> URL?
         }
         return result
     } else {
-        // User clicked on "Cancel"
         return nil
     }
 }
@@ -53,7 +47,7 @@ func saveFolderSelection() -> URL?
     dialog.canCreateDirectories    = true;
     
     if (dialog.runModal() == NSApplication.ModalResponse.OK) {
-        let result = dialog.url // Pathname of the file
+        let result = dialog.url
         
         if (result != nil) {
             let path = result!.path
@@ -61,7 +55,6 @@ func saveFolderSelection() -> URL?
         }
         return result
     } else {
-        // User clicked on "Cancel"
         return nil
     }
 }
@@ -153,6 +146,24 @@ func restoreBookmark(_ bookmark: (key: URL, value: Data)) -> URL?
     return restoredUrl
 }
 
+func selectAwsCredsFile() throws {
+    NSLog("will select AWS credentials file...")
+    var awsCredsUrl: URL?
+    if testFileAsConfig == nil {
+        print("menu new")
+        awsCredsUrl = openFolderSelection()
+    } else {
+        print("menu else")
+        awsCredsUrl = testFileAsConfig
+    }
+    if awsCredsUrl == nil {
+        NSLog("Error: Could not get selected file!")
+        return
+    }
+    let _ = try aws.setConfig(credsFile: awsCredsUrl!)
+    print(awsCredsUrl!)
+}
+
 extension String {
     enum TruncationPosition {
         case head
@@ -237,5 +248,4 @@ extension UserDefaults {
         }
         
     }
-    
 }
