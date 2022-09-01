@@ -12,7 +12,6 @@ import PerfectINI
 
 class MenuBarManager: NSObject, NSMenuDelegate {
     var manageController: NSWindowController?
-    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     private var window: NSWindow!
     
     struct Profile: Codable {
@@ -31,10 +30,8 @@ class MenuBarManager: NSObject, NSMenuDelegate {
     
     func menuWillOpen(_ menu: NSMenu) {
         if aws == nil {
-            print("willOpen new")
             ConstructInitMenu(menu: menu)
         } else {
-            print("willOpen else")
             SetupMainMenu(menu: menu)
         }
     }
@@ -126,7 +123,6 @@ class MenuBarManager: NSObject, NSMenuDelegate {
         profiles = []
         funcPath = aws.creds!
         let switchProfileSubmenu = NSMenu()
-        menu.removeAllItems()
 
         if funcPath != nil {
             stringPath = funcPath!.absoluteString.replacingOccurrences(of: "file://", with: "")
@@ -191,8 +187,6 @@ class MenuBarManager: NSObject, NSMenuDelegate {
 
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
-
-        statusItem.menu = menu
     }
         
     func alertUserWithWarning(message: String) {

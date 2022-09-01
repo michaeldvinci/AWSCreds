@@ -41,7 +41,7 @@ func saveFolderSelection() -> URL?
 {
     let dialog = NSSavePanel();
     
-    dialog.title                   = "Export kubeconfig file";
+    dialog.title                   = "Export AWS creds file";
     dialog.showsResizeIndicator    = true;
     dialog.showsHiddenFiles        = true;
     dialog.canCreateDirectories    = true;
@@ -101,6 +101,7 @@ func loadBookmarks() -> URL?
 {
     let path = getBookmarkPath()
     //print("Bookmarks path: " + path )
+    
     if let bookmarks = NSKeyedUnarchiver.unarchiveObject(withFile: path) {
         
         for bookmark in bookmarks as! [URL: Data]
@@ -150,10 +151,8 @@ func selectAwsCredsFile() throws {
     NSLog("will select AWS credentials file...")
     var awsCredsUrl: URL?
     if testFileAsConfig == nil {
-        print("menu new")
         awsCredsUrl = openFolderSelection()
     } else {
-        print("menu else")
         awsCredsUrl = testFileAsConfig
     }
     if awsCredsUrl == nil {
@@ -161,7 +160,6 @@ func selectAwsCredsFile() throws {
         return
     }
     let _ = try aws.setConfig(credsFile: awsCredsUrl!)
-    print(awsCredsUrl!)
 }
 
 extension String {

@@ -29,7 +29,7 @@ public class Aws {
         }
         if creds == nil || creds != f {
             creds = openFolderSelection()
-//            initWatcher()
+            initWatcher()
         }
     }
     
@@ -94,14 +94,11 @@ public class Aws {
         fileContent = try String(contentsOf: url, encoding: .utf8)
         
         let decoder = INIDecoder()
-        print(decoder as Any)
         let config = try decoder.decode(Config.self, from: Data(contentsOf: URL(fileURLWithPath: fileContent)))
         
         for (i, ctx) in config.Profiles.enumerated() {
             if #available(OSX 10.13, *) {
-                print("games")
                 print("i: \(i), ctx: \(ctx)")
-                print("!")
             }
         }
 
@@ -121,7 +118,6 @@ public class Aws {
 //    }
     
     func getConfig(url: URL) throws -> Config? {
-        print("getConfig")
         return try loadConfig(url: url)
     }
     
